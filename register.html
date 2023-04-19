@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="image2.jpg" type="image/x-icon">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Registration</title>
+</head>
+<body>
+    <div class="wholeform">
+        <div class="form">
+            <a href="validation__of_form_using_Multidimensionalarray.html">
+                <img src="back.svg" alt="" class="back-arrow">
+            </a>
+            <figcaption>Home</figcaption>
+
+            <h1>Registration Gaming Form</h1>
+           <!-- <em> <p id="announce">*If you are you new user and want to register, kindly enter the details and submit 'register'</p></em> -->
+          
+            <label for="">Username</label>
+            <input type="text" id="username" placeholder="Enter Username">
+            <label for="">Password</label>
+            <input type="text" id="pass" placeholder="Enter Password">
+        </div>
+        <button onclick="register()" id="subBtn">Register</button>
+        
+    </div>
+
+    <style>
+        .back-arrow{
+            width: 20px;
+            display: flex;
+                       
+        }
+        figcaption{
+            display: flex;
+        }
+        *{
+           font-family: Arial, Helvetica, sans-serif;
+       }
+       #subBtn{
+        margin-left: 180px;
+       }
+       #newcustomer{
+font-size: 20px;
+background-color: lightblue;
+color: black;
+       }
+       #announce{
+           text-align: center;
+       }
+       .red{
+           color: red;
+           text-decoration: underline;
+       }
+       h1{
+           text-decoration: underline;
+           font-size: 40px;
+           color: white;
+
+
+       }
+       .wholeform{
+           margin-left: 510px;
+           background-image: linear-gradient(45deg, #cc2b5e,   #753a88);
+           width: 500px;
+           /* height: 500px; */
+           padding: 20px;
+           border-radius: 20px;
+           box-shadow: 10px 10px 10px grey;
+
+        }
+        body{
+           background-image: url('remation.jpg');
+        }
+       .form{
+           /* border: 1px solid black; */
+           width: 500px;
+           text-align: center;
+       }
+       label{
+           font-size: 40px;
+       }
+       input{
+           font-size: 40px;
+       }
+       button{
+           margin-top:20px;
+           font-size: 30px;
+           padding: 10px;
+           background-color: lightcoral;
+           color: white;
+           transition: ease-in-out .3s;
+           border: none;
+           box-shadow: 10px 5px 5px black;
+           margin-left: 50px;
+       }
+       button:hover{
+           /* transform: scaleX(2); */
+           transform: scaleY(1.5);
+           letter-spacing: 2px;
+           border-radius: 10px;
+
+       }
+       button:active{
+           box-shadow: 0px 0px 0px white;
+       }
+   </style>
+
+   <script>
+    function register(){
+        const usernameInput = document.getElementById('username').value;
+        const passInput = document.getElementById('pass').value;
+        let users =[['dev','devpatel'],['chase','woofwoof']];
+
+        const newData = [usernameInput,passInput];
+        users.push(newData);
+        alert(users)
+    }
+   </script>
+    
+</body>
+</html>
